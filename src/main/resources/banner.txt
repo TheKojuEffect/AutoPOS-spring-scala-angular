@@ -1,0 +1,8 @@
+
+  ${AnsiColor.GREEN}   _____          __          ${AnsiColor.RED} __________________    _________
+  ${AnsiColor.GREEN}  /  _  \  __ ___/  |_  ____  ${AnsiColor.RED} \______   \_____  \  /   _____/
+  ${AnsiColor.GREEN} /  /_\  \|  |  \   __\/  _ \ ${AnsiColor.RED} |     ___//   |   \ \_____  \
+  ${AnsiColor.GREEN}/    |    \  |  /|  | (  <_> )${AnsiColor.RED} |    |   /    |    \/        \
+  ${AnsiColor.GREEN}\____|__  /____/ |__|  \____/ ${AnsiColor.RED} |____|   \_______  /_______  /
+  ${AnsiColor.GREEN}        \/                    ${AnsiColor.RED}                  \/        \/ ${application.formatted-version}
+
