@@ -1,8 +1,12 @@
 package io.koju.autopos
 
-import io.koju.autopos.config.AppConfig
 import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
 
 object Application extends App {
-  SpringApplication.run(classOf[AppConfig])
+  SpringApplication.run(classOf[Application])
 }
+
+
+@SpringBootApplication
+class Application
