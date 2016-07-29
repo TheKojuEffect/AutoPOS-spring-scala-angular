@@ -1,5 +1,8 @@
 spring:
- datasource:
-   url: jdbc:postgresql://localhost:5432/AutoPOS
-   username: postgres
-   password: test12
+  datasource:
+    url: jdbc:postgresql://localhost:5432/AutoPOS
+    username: postgres
+    password: test12
+
+  jpa:
+    database: postgresql
