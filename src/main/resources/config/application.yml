@@ -9,5 +9,9 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
       use-new-id-generator-mappings: true
+
+liquibase:
+  change-log: classpath:/liquibase/master.xml
+

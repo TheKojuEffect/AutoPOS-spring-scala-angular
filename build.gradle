@@ -49,6 +49,7 @@ dependencies {
 
     compile "org.projectlombok:lombok:$lombokVersion"
     compile "com.querydsl:querydsl-jpa:$queryDslVersion"
+    compile "org.liquibase:liquibase-core"
 
     runtime 'org.postgresql:postgresql'
 
