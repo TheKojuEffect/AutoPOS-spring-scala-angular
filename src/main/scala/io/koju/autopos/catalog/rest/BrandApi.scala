@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation._
 class BrandApi @Autowired()(private val brandRepository: BrandRepo) {
 
   @RequestMapping(value = Array("/{id}"), method = Array(GET))
-  def getBrand(@PathVariable("id") id: Long) =
-    brandRepository.findOne(id)
+  def getBrand(@PathVariable("id") brand: Brand) = brand
 
   @RequestMapping(method = Array(POST))
   def saveBrand(@RequestBody brand: Brand) =

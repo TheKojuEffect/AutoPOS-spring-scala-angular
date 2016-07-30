@@ -46,6 +46,7 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly("org.springframework.boot:spring-boot-devtools")
 
     compile "org.projectlombok:lombok:$lombokVersion"
     compile "com.querydsl:querydsl-jpa:$queryDslVersion"
@@ -74,4 +75,13 @@ idea {
 //        downloadSources = true
         jdkName = '1.8'
     }
+}
+
+bootRepackage {
+    mainClass = 'io.koju.autopos.Application'
+    excludeDevtools = true
+}
+
+bootRun {
+    addResources = true
 }
