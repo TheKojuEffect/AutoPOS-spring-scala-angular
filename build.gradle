@@ -64,3 +64,12 @@ querydsl {
 compileScala {
     sourceSets.main.scala.srcDir queryDslDir
 }
+
+idea {
+    module {
+        generatedSourceDirs += file(queryDslDir)
+//        downloadJavadoc = true
+//        downloadSources = true
+        jdkName = '1.8'
+    }
+}
