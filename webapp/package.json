@@ -1,9 +1,10 @@
 {
-  "name": "angular2-seed",
-  "version": "0.0.0",
-  "description": "Modular seed project for Angular 2 apps with fast, statically typed build",
+  "name": "autopos",
+  "version": "0.0.1",
+  "description": "Auto Point of Sale",
+  "private": true,
   "repository": {
-    "url": "https://github.com/mgechev/angular2-seed"
+    "url": "https://gitlab.com/TheKojuEffect/AutoPOS"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color",
@@ -32,8 +33,7 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update"
   },
-  "author": "Minko Gechev <mgechev>",
-  "license": "MIT",
+  "author": "Kapil Koju <kplx2.0@gmail.com>",
   "devDependencies": {
     "async": "^2.0.0",
     "autoprefixer": "^6.3.7",
