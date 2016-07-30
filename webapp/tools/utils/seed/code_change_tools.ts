@@ -14,14 +14,6 @@ let runServer = () => {
  * Runs BrowserSync as the listening process for the application.
  */
 let listen = () => {
-  // if (ENABLE_HOT_LOADING) {
-  //   ng2HotLoader.listen({
-  //     port: HOT_LOADER_PORT,
-  //     processPath: file => {
-  //       return file.replace(join(PROJECT_ROOT, APP_SRC), join('dist', 'dev'));
-  //     }
-  //   });
-  // }
   runServer();
 };
 
