@@ -32,6 +32,7 @@ repositories {
     mavenCentral()
 }
 
+ext['hibernate.version'] = '5.2.1.Final'
 ext {
     scalaVersion = '2.11.8'
     queryDslVersion = '4.1.3'
