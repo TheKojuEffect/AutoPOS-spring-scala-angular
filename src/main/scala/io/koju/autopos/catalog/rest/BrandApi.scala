@@ -4,7 +4,7 @@ package io.koju.autopos.catalog.rest
 import javax.validation.Valid
 
 import io.koju.autopos.catalog.domain.Brand
-import io.koju.autopos.catalog.service.BrandRepo
+import io.koju.autopos.catalog.repo.BrandRepo
 import org.springframework.http.HttpStatus.{CREATED, NOT_FOUND, NO_CONTENT, OK}
 import org.springframework.http.{MediaType, ResponseEntity}
 import org.springframework.web.bind.annotation.RequestMethod.{DELETE, GET, POST, PUT}
