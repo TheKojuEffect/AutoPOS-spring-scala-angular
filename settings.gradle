@@ -1,6 +1,6 @@
 rootProject.name = 'AutoPOS'
 
-include 'webapp'
+include 'ui'
 
 rootProject.children.each { project ->
     project.buildFileName = "${project.name}.gradle"
