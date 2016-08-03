@@ -4,8 +4,8 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'apos-navbar',
-    templateUrl: 'navbar.component.html',
+    templateUrl: 'navbar.cmp.html',
     directives: [ROUTER_DIRECTIVES]
 })
-export class NavbarComponent {
+export class NavbarCmp {
 }
