@@ -3,7 +3,7 @@ import {CatalogCmp} from './index';
 
 export const CatalogRoutes: RouterConfig = [
     {
-        path: '',
+        path: 'catalog',
         component: CatalogCmp
     },
 ];
