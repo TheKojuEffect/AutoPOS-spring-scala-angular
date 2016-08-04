@@ -2,7 +2,6 @@ apply plugin: 'idea'
 
 idea {
     module {
-        excludeDirs += file('node_modules')
         excludeDirs += file('dist')
     }
 }
