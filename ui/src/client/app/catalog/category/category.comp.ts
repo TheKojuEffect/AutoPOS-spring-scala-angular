@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'pos-categories',
+    selector: 'pos-category',
     template: '<h2>Categories</h2>'
 })
-export class CategoriesComp {
+export class CategoryComp {
 
 }

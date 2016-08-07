@@ -1,7 +1,7 @@
 import {RouterConfig} from '@angular/router';
 import {CatalogComp} from './index';
-import {BrandRoutes} from './brand/brands.routes';
-import {CategoriesRoutes} from './category/categories.routes';
+import {BrandRoutes} from './brand/index';
+import {CategoriesRoutes} from './category/category.routes';
 
 export const CatalogRoutes: RouterConfig = [
     {

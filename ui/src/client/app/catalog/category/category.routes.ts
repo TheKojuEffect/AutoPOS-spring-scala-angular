@@ -1,9 +1,9 @@
 import {RouterConfig} from '@angular/router';
-import {CategoriesComp} from './categories.comp';
+import {CategoryComp} from './category.comp';
 
 export const CategoriesRoutes: RouterConfig = [
     {
         path: 'categories',
-        component: CategoriesComp
+        component: CategoryComp
     }
 ];

@@ -4,8 +4,8 @@ import {BrandListComp} from './brand-list.comp';
 
 @Component({
     moduleId: module.id,
-    selector: 'pos-brands',
-    templateUrl: 'brands.comp.html',
+    selector: 'pos-brand',
+    templateUrl: 'brand.comp.html',
     directives: [ROUTER_DIRECTIVES, BrandListComp]
 })
 export class BrandComp {
