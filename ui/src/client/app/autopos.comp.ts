@@ -7,7 +7,7 @@ import {Config, NavbarCmp} from './shared/index';
     moduleId: module.id,
     selector: 'autopos',
     viewProviders: [HTTP_PROVIDERS],
-    templateUrl: 'autopos.cmp.html',
+    templateUrl: 'autopos.comp.html',
     directives: [ROUTER_DIRECTIVES, NavbarCmp]
 })
 export class AutoposCmp {

@@ -1,9 +1,9 @@
 import {RouterConfig} from '@angular/router';
-import {DashCmp} from './dash.cmp';
+import {DashComp} from './dash.comp';
 
 export const DashRoutes: RouterConfig = [
     {
         path: '',
-        component: DashCmp
+        component: DashComp
     }
 ];

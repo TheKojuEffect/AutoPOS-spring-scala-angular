@@ -5,6 +5,6 @@ import {Component} from '@angular/core';
     selector: 'pos-dash',
     template: '<h3>Auto Point of Sale</h3>'
 })
-export class DashCmp {
+export class DashComp {
 
 }

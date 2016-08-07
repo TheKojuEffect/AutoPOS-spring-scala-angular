@@ -1,6 +1,6 @@
 import {provideRouter, RouterConfig} from '@angular/router';
 import {CatalogRoutes} from './catalog/catalog.routes';
-import {DashRoutes} from './catalog/dash/dash.routes';
+import {DashRoutes} from './dash/dash.routes';
 
 const routes: RouterConfig = [
     ...DashRoutes,

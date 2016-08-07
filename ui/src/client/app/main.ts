@@ -3,7 +3,7 @@ import {disableDeprecatedForms, provideForms} from '@angular/forms';
 import {enableProdMode} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {APP_ROUTER_PROVIDERS} from './autopos.routes';
-import {AutoposCmp} from './autopos.cmp';
+import {AutoposCmp} from './autopos.comp';
 
 if ('<%= ENV %>' === 'prod') {
     enableProdMode();

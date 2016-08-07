@@ -1,2 +1,2 @@
-export * from './catalog.cmp'
+export * from './catalog.comp'
 export * from './catalog.routes'
