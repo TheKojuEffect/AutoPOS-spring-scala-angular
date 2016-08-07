@@ -1,4 +1,4 @@
-package io.koju.autopos.catalog.rest
+package io.koju.autopos.catalog.api
 
 
 import javax.validation.Valid
