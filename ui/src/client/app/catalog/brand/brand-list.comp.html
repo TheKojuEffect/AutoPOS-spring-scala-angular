@@ -1,1 +1,12 @@
-<h2>Brand List</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let brand of brands">
+        <td>{{brand.name}}</td>
+    </tr>
+    </tbody>
+</table>

@@ -4,6 +4,7 @@ import {enableProdMode} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {APP_ROUTER_PROVIDERS} from './autopos.routes';
 import {AutoposComp} from './autopos.comp';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 if ('<%= ENV %>' === 'prod') {
     enableProdMode();
@@ -16,6 +17,7 @@ if ('<%= ENV %>' === 'prod') {
 bootstrap(AutoposComp, [
     disableDeprecatedForms(),
     provideForms(),
+    HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS,
     {
         provide: APP_BASE_HREF,
