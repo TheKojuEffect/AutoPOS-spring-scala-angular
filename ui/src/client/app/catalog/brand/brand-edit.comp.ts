@@ -11,6 +11,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class BrandEditComp implements OnInit, OnDestroy {
 
+    private title = 'Edit Brand';
+
     private brand: Brand;
     private sub: Subscription;
 

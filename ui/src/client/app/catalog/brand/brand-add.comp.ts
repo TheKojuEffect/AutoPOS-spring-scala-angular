@@ -9,6 +9,9 @@ import {Router, ActivatedRoute} from '@angular/router';
     templateUrl: 'brand-form.comp.html'
 })
 export class BrandAddComp {
+
+    private title = 'Add Brand';
+
     private brand = new Brand('');
 
     constructor(private brandService: BrandService,
