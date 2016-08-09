@@ -1,0 +1,29 @@
+<div>
+    <h3>
+        <span>Categories</span>
+        <button class="btn btn-primary pull-right" [routerLink]="['new']">
+            <span class="glyphicon glyphicon-plus">
+            </span>
+            Add Category
+        </button>
+    </h3>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Short Name</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let category of categories | async">
+            <td>
+                <a [routerLink]="[category.id]">{{category.shortName}}</a>
+            </td>
+            <td>
+                {{category.name}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
