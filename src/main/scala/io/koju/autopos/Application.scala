@@ -19,7 +19,7 @@ class Application {
   def corsConfigurer(): WebMvcConfigurer = {
     new WebMvcConfigurerAdapter() {
       override def addCorsMappings(registry: CorsRegistry) {
-        registry.addMapping("/api/**")
+        registry.addMapping("/api/**").allowedMethods("GET", "POST", "PUT", "DELETE")
       }
     }
   }

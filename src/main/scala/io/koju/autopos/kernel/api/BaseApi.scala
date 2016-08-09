@@ -28,7 +28,7 @@ abstract class BaseApi[T <: AuditableBaseEntity](protected val repo: AuditableBa
   @PostMapping
   def save(@RequestBody @Valid entity: T) = {
     repo.save(entity)
-    new ResponseEntity(CREATED)
+    new ResponseEntity(entity, CREATED)
   }
 
   @PutMapping(value = Array("/{id}"))
@@ -37,7 +37,7 @@ abstract class BaseApi[T <: AuditableBaseEntity](protected val repo: AuditableBa
     Assert.isTrue(entity.getId == id)
 
     repo.save(entity)
-    new ResponseEntity(OK)
+    new ResponseEntity(entity, OK)
   }
 
   @DeleteMapping(value = Array("/{id}"))

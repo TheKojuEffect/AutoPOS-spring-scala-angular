@@ -1,0 +1,18 @@
+<div *ngIf="brand">
+
+    <h3>Add Brand</h3>
+
+    <form (ngSubmit)="submitBrand()" #brandForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" required minlength="2" maxlength="50"
+                   [(ngModel)]="brand.name" name="name" #name="ngModel">
+        </div>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name should be between 2 and 50 characters
+        </div>
+        <button type="submit" class="btn btn-default" [disabled]="!brandForm.form.valid">Submit</button>
+    </form>
+
+</div>
+

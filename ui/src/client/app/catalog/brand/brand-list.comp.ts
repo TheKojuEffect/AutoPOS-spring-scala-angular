@@ -1,23 +1,25 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BrandService} from './brand.service';
 import 'rxjs/Rx';
 import {Brand} from './brand';
+import {Observable} from 'rxjs';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     moduleId: module.id,
     selector: 'pos-brand-list',
     templateUrl: 'brand-list.comp.html',
-    providers: [BrandService]
+    directives: [ROUTER_DIRECTIVES]
 })
-export class BrandListComp {
-    brands: Brand[];
+export class BrandListComp implements OnInit {
+
+    brands: Observable<Brand[]>;
 
     constructor(private brandService: BrandService) {
     }
 
     public ngOnInit() {
-        this.brandService.getBrands()
-            .subscribe(brands => this.brands = brands)
+        this.brands = this.brandService.getBrands();
     }
 
 }

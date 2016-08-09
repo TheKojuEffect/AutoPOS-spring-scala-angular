@@ -1,1 +1,1 @@
-export * from 'dash.comp'
+export * from './dash.comp'
