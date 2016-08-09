@@ -1,9 +1,15 @@
 package io.koju.autopos.catalog.util
 
+import com.github.scalaspring.scalatest.TestContextManagement
+import io.koju.autopos.Application
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import org.scalatest.prop.TableDrivenPropertyChecks
+import org.scalatest.prop.{PropertyChecks, TableDrivenPropertyChecks}
 import org.scalatest.{FlatSpec, Matchers}
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.jdbc.core.JdbcTemplate
+import org.springframework.test.context.ContextConfiguration
 
 @RunWith(classOf[JUnitRunner])
 class ItemCodeSpec extends FlatSpec with TableDrivenPropertyChecks with Matchers {
@@ -24,6 +30,25 @@ class ItemCodeSpec extends FlatSpec with TableDrivenPropertyChecks with Matchers
     forAll(idCodes) { (id: Long, code: String) =>
       ItemCode(id) should equal(code)
       ItemCode(code) should equal(id)
+    }
+  }
+}
+
+
+@RunWith(classOf[JUnitRunner])
+@SpringBootTest
+@ContextConfiguration(classes = Array(classOf[Application]))
+class ItemCodeDbSpec extends FlatSpec with TestContextManagement with PropertyChecks with Matchers {
+
+  @Autowired
+  val jdbcTemplate: JdbcTemplate = null
+
+  "Item Code encode" should "be consistent with DB item_code" in {
+    forAll { (id: Long) =>
+      whenever(id > 0) {
+        val code = jdbcTemplate.queryForObject("SELECT item_code(?);", classOf[String], id.asInstanceOf[java.lang.Long])
+        ItemCode(id) should equal(code)
+      }
     }
   }
 }

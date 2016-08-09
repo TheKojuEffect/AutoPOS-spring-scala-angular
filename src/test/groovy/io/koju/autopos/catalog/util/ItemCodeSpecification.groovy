@@ -1,13 +1,17 @@
 package io.koju.autopos.catalog.util
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.test.context.ContextConfiguration
-import spock.lang.Ignore
 import spock.lang.Specification
 
 @SpringBootTest
 @ContextConfiguration
 class ItemCodeSpecification extends Specification {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate
 
     def "ItemCode decode and encode process is working and symmetric"() {
 
@@ -28,7 +32,6 @@ class ItemCodeSpecification extends Specification {
         9223372036854775807L || 'TCWHHMFDCBX3XH'
     }
 
-    @Ignore
     def "ItemCode.encode is consistent with item_code function in DB"() {
 
         expect:

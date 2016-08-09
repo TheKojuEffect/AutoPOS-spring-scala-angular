@@ -13,4 +13,9 @@
         <sqlFile path="sql/category_table.sql" relativeToChangelogFile="true"/>
     </changeSet>
 
+    <changeSet id="14" author="kplx2.0@gmail.com" dbms="postgresql">
+        <sqlFile path="sql/item_table.sql"
+                 relativeToChangelogFile="true" splitStatements="false"/>
+    </changeSet>
+
 </databaseChangeLog>

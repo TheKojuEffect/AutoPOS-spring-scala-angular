@@ -34,6 +34,7 @@ ext {
     scalaVersion = '2.11.8'
     scalaTestVersion = '3.0.0'
     scalaCheckVersion = '1.13.2'
+    scalaTestSpringVersion = '0.3.1'
 }
 
 dependencies {
@@ -41,7 +42,7 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly("org.springframework.boot:spring-boot-devtools")
+    compileOnly "org.springframework.boot:spring-boot-devtools"
     compile "org.projectlombok:lombok:$lombokVersion"
     compile "org.liquibase:liquibase-core"
 
@@ -49,9 +50,10 @@ dependencies {
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.spockframework:spock-spring'
-    testCompile "org.scalactic:scalactic_2.11:${scalaTestVersion}"
-    testCompile "org.scalatest:scalatest_2.11:${scalaTestVersion}"
-    testCompile "org.scalacheck:scalacheck_2.11:${scalaCheckVersion}"
+    testCompile "org.scalactic:scalactic_2.11:$scalaTestVersion"
+    testCompile "org.scalatest:scalatest_2.11:$scalaTestVersion"
+    testCompile "org.scalacheck:scalacheck_2.11:$scalaCheckVersion"
+    testCompile "com.github.scalaspring:scalatest-spring_2.11:$scalaTestSpringVersion"
 }
 
 idea {
