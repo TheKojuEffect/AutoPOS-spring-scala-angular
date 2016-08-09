@@ -3,6 +3,7 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Category} from './category';
 import {Subscription} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -18,7 +19,8 @@ export class CategoryEditComp implements OnInit, OnDestroy {
 
     constructor(private categoryService: CategoryService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private location: Location) {
     }
 
     ngOnInit() {
@@ -32,6 +34,11 @@ export class CategoryEditComp implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
+
+    goBack() {
+        this.location.back();
+    }
+
 
     submitCategory() {
         this.categoryService.updateCategory(this.category)

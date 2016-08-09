@@ -2,6 +2,7 @@ import {BrandService} from './brand.service';
 import {Component} from '@angular/core';
 import {Brand} from './brand';
 import {Router, ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -16,7 +17,12 @@ export class BrandAddComp {
 
     constructor(private brandService: BrandService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private location: Location) {
+    }
+
+    goBack() {
+        this.location.back();
     }
 
     submitBrand() {

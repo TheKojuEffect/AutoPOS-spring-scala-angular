@@ -2,6 +2,7 @@ import {CategoryService} from './category.service';
 import {Component} from '@angular/core';
 import {Category} from './category';
 import {Router, ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -16,8 +17,15 @@ export class CategoryAddComp {
 
     constructor(private categoryService: CategoryService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private location: Location) {
     }
+
+
+    goBack() {
+        this.location.back();
+    }
+
 
     submitCategory() {
         this.categoryService.addCategory(this.category)

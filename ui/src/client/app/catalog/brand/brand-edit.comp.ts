@@ -3,6 +3,7 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Brand} from './brand';
 import {Subscription} from 'rxjs';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
     moduleId: module.id,
@@ -18,7 +19,8 @@ export class BrandEditComp implements OnInit, OnDestroy {
 
     constructor(private brandService: BrandService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private location: Location) {
     }
 
     ngOnInit() {
@@ -32,6 +34,11 @@ export class BrandEditComp implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
+
+    goBack() {
+        this.location.back();
+    }
+
 
     submitBrand() {
         this.brandService.updateBrand(this.brand)
