@@ -1,15 +1,17 @@
 package io.koju.autopos.catalog.util
 
 import com.github.scalaspring.scalatest.TestContextManagement
-import io.koju.autopos.Application
+import io.koju.autopos.test.autoconfigure.jdbc.DataJdbcTest
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.prop.{PropertyChecks, TableDrivenPropertyChecks}
 import org.scalatest.{FlatSpec, Matchers}
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestDatabase
+import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestDatabase._
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.test.context.ContextConfiguration
+import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(classOf[JUnitRunner])
 class ItemCodeSpec extends FlatSpec with TableDrivenPropertyChecks with Matchers {
@@ -35,9 +37,10 @@ class ItemCodeSpec extends FlatSpec with TableDrivenPropertyChecks with Matchers
 }
 
 
-@RunWith(classOf[JUnitRunner])
-@SpringBootTest
-@ContextConfiguration(classes = Array(classOf[Application]))
+@RunWith(classOf[SpringRunner])
+@DataJdbcTest
+@ContextConfiguration(classes = Array(classOf[ItemCodeDbSpec]))
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 class ItemCodeDbSpec extends FlatSpec with TestContextManagement with PropertyChecks with Matchers {
 
   @Autowired
