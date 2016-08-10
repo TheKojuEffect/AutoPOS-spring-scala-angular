@@ -1,6 +1,7 @@
 package io.koju.autopos.catalog.domain
 
 import java.lang.Long
+import java.math.BigDecimal
 import javax.persistence.GenerationType.SEQUENCE
 import javax.persistence._
 import javax.validation.constraints.{Min, NotNull, Size}
