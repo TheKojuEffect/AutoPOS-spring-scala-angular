@@ -31,4 +31,10 @@ class Category extends AuditableBaseEntity {
   @BeanProperty
   var name: String = _
 
+  @PrePersist
+  @PreUpdate
+  def capitalizeShortName() {
+    shortName = shortName.toUpperCase
+  }
+
 }

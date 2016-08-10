@@ -8,8 +8,6 @@ spring:
     database: postgresql
     show-sql: false
     generate-ddl: true
-    hibernate:
-      ddl-auto: none
 
 liquibase:
   change-log: classpath:/liquibase/master.xml
