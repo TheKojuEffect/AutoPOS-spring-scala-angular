@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation._
 
 @RestController
 @RequestMapping(value = Array("/api/categories"))
-class CategoryApi(private val categoryRepo: CategoryRepo)
+class CategoryApi(categoryRepo: CategoryRepo)
   extends BaseApi(categoryRepo) {
 }
