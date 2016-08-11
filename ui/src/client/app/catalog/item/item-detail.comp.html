@@ -1,0 +1,108 @@
+<div *ngIf="item">
+    <h3>Item Detail</h3>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tbody>
+            <tr>
+                <td>
+                    <span>Code</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.code" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.name" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Description</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.description" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Quantity</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.quantity" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span>Marked Price</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.markedPrice" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Brand</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.brand && item.brand.name" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Category</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.category && item.category.shortName"
+                           readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Location</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.location" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Remarks</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" [value]="item.remarks" readonly>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-xs-4">
+            <a class="btn btn-info btn-sm pull-left"
+               (click)="goBack()">
+                <span class="glyphicon glyphicon-arrow-left"></span> &nbsp; <span> Back</span>
+            </a>
+        </div>
+
+        <div class="col-md-4 col-md-offset-4 col-xs-8">
+            <div class="btn-toolbar pull-right">
+                <button class="btn btn-primary btn-sm"
+                        [routerLink]="['edit']">
+                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                </button>
+
+                <button class="btn btn-danger btn-sm"
+                        (click)="deleteItem()">
+                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

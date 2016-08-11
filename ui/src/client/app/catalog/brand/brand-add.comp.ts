@@ -13,7 +13,7 @@ export class BrandAddComp {
 
     private title = 'Add Brand';
 
-    private brand = new Brand('');
+    private brand = new Brand();
 
     constructor(private brandService: BrandService,
                 private router: Router,

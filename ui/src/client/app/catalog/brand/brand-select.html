@@ -1,0 +1,10 @@
+<select class="form-control"
+        (change)="changeBrand($event.target.value)">
+    <option value="">-- Select --</option>
+    <option
+            *ngFor="let b of brands"
+            [value]="b.id"
+            [selected]="b.id == brandId">
+        {{b.name}}
+    </option>
+</select>

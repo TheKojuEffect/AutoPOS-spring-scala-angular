@@ -1,10 +1,10 @@
 import {APP_BASE_HREF} from '@angular/common';
 import {disableDeprecatedForms, provideForms} from '@angular/forms';
-import {enableProdMode, PLATFORM_DIRECTIVES, provide} from '@angular/core';
+import {enableProdMode, PLATFORM_DIRECTIVES} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {APP_ROUTER_PROVIDERS} from './autopos.routes';
 import {AutoposComp} from './autopos.comp';
-import {HTTP_PROVIDERS, BaseRequestOptions, Headers, RequestOptions, RequestOptionsArgs} from '@angular/http';
+import {HTTP_PROVIDERS} from '@angular/http';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 if ('<%= ENV %>' === 'prod') {

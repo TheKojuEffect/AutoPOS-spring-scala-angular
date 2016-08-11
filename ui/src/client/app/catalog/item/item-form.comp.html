@@ -1,0 +1,75 @@
+<div *ngIf="item">
+
+    <h3>{{title}}</h3>
+
+    <form (ngSubmit)="submitItem()" #itemForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" required minlength="2" maxlength="50"
+                   [(ngModel)]="item.name" name="name" #name="ngModel">
+        </div>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            Name should be between 2 and 50 characters
+        </div>
+
+
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <pos-brand-select id="brand"
+                              [brandId]="item.brand && item.brand.id"
+                              (select)="item.brand = $event">
+            </pos-brand-select>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <pos-category-select id="category"
+                              [categoryId]="item.category && item.category.id"
+                              (select)="item.category = $event">
+            </pos-category-select>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Quantity</label>
+            <input type="number" id="quantity" class="form-control" required min="0" step="1"
+                   [(ngModel)]="item.quantity" name="quantity" #quantity="ngModel">
+        </div>
+        <div [hidden]="quantity.valid || name.pristine" class="alert alert-danger">
+            Quantity is required
+        </div>
+
+        <div class="form-group">
+            <label for="markedPrice">Marked Price</label>
+            <input type="number" id="markedPrice" class="form-control" required min="0.01" step="0.01"
+                   [(ngModel)]="item.markedPrice" name="markedPrice" #markedPrice="ngModel">
+        </div>
+        <div [hidden]="markedPrice.valid || markedPrice.pristine" class="alert alert-danger">
+            Marked Price is required
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" class="form-control" maxlength="50"
+                   [(ngModel)]="item.location" name="location" #location="ngModel">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" id="description" class="form-control" maxlength="250"
+                      [(ngModel)]="item.description" name="description" #description="ngModel">
+            </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <textarea type="text" id="remarks" class="form-control" maxlength="250"
+                      [(ngModel)]="item.remarks" name="remarks" #remarks="ngModel">
+            </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-default" [disabled]="!itemForm.form.valid">Submit</button>
+        <button type="reset" class="btn btn-danger" (click)="goBack()">Cancel</button>
+    </form>
+
+</div>
+

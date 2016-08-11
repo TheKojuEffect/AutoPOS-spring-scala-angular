@@ -1,0 +1,10 @@
+<select class="form-control"
+        (change)="changeCategory($event.target.value)">
+    <option value="">-- Select --</option>
+    <option
+            *ngFor="let c of categories"
+            [value]="c.id"
+            [selected]="c.id == categoryId">
+        {{c.shortName}} -- {{c.name}}
+    </option>
+</select>

@@ -2,6 +2,7 @@ import {RouterConfig} from '@angular/router';
 import {CatalogComp} from './index';
 import {BrandRoutes} from './brand/index';
 import {CategoryRoutes} from './category/category.routes';
+import {ItemRoutes} from './item/item.routes';
 
 export const CatalogRoutes: RouterConfig = [
     {
@@ -10,9 +11,10 @@ export const CatalogRoutes: RouterConfig = [
         children: [
             {
                 path: '',
-                redirectTo: 'brands',
+                redirectTo: 'items',
                 pathMatch: 'full'
             },
+            ...ItemRoutes,
             ...BrandRoutes,
             ...CategoryRoutes
         ]
