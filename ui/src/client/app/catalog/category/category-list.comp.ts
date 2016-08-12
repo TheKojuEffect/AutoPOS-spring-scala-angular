@@ -8,8 +8,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'pos-category-list',
-    templateUrl: 'category-list.comp.html',
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'category-list.comp.html'
 })
 export class CategoryListComp implements OnInit {
 

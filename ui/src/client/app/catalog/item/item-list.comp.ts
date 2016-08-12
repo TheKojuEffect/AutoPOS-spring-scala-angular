@@ -8,8 +8,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'pos-item-list',
-    templateUrl: 'item-list.comp.html',
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'item-list.comp.html'
 })
 export class ItemListComp implements OnInit {
 
@@ -21,5 +20,4 @@ export class ItemListComp implements OnInit {
     public ngOnInit() {
         this.items = this.itemService.getItems();
     }
-
 }

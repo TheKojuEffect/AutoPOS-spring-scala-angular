@@ -8,8 +8,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
     moduleId: module.id,
     selector: 'pos-brand-list',
-    templateUrl: 'brand-list.comp.html',
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'brand-list.comp.html'
 })
 export class BrandListComp implements OnInit {
 

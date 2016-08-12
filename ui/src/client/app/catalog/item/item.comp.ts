@@ -8,7 +8,6 @@ import {CategoryService} from '../category/category.service';
     moduleId: module.id,
     selector: 'pos-item',
     template: '<router-outlet></router-outlet>',
-    directives: [ROUTER_DIRECTIVES],
     providers: [ItemService, BrandService, CategoryService]
 })
 export class ItemComp {

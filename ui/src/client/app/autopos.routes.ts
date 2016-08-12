@@ -1,12 +1,8 @@
-import {provideRouter, RouterConfig} from '@angular/router';
+import {Routes} from '@angular/router';
 import {CatalogRoutes} from './catalog/catalog.routes';
 import {DashRoutes} from './dash/dash.routes';
 
-const routes: RouterConfig = [
+export const routes: Routes = [
     ...DashRoutes,
     ...CatalogRoutes
-];
-
-export const APP_ROUTER_PROVIDERS = [
-    provideRouter(routes),
 ];
