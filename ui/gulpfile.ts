@@ -55,25 +55,6 @@ gulp.task('build.prod', (done: any) =>
               done));
 
 // --------------
-// Build test.
-gulp.task('build.test', (done: any) =>
-  runSequence('clean.once',
-              'tslint',
-              'build.assets.dev',
-              'build.html_css',
-              'build.js.dev',
-              'build.js.test',
-              'build.index.dev',
-              done));
-
-// --------------
-// Build test watch.
-gulp.task('build.test.watch', (done: any) =>
-  runSequence('build.test',
-              'watch.test',
-              done));
-
-// --------------
 // Build tools.
 gulp.task('build.tools', (done: any) =>
   runSequence('clean.tools',
@@ -113,13 +94,6 @@ gulp.task('serve.prod', (done: any) =>
 
 
 // --------------
-// Test.
-gulp.task('test', (done: any) =>
-  runSequence('build.test',
-              'karma.start',
-              done));
-
-// --------------
 // Clean dev/coverage that will only run once
 // this prevents karma watchers from being broken when directories are deleted
 let firstRun = true;
@@ -131,4 +105,4 @@ gulp.task('clean.once', (done: any) => {
     util.log('Skipping clean on rebuild');
     done();
   }
-})
+});

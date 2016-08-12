@@ -3,7 +3,6 @@ import {ItemService} from './item.service';
 import 'rxjs/Rx';
 import {Item} from './item';
 import {Observable} from 'rxjs';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     moduleId: module.id,

@@ -3,7 +3,6 @@ import {BrandService} from './brand.service';
 import 'rxjs/Rx';
 import {Brand} from './brand';
 import {Observable} from 'rxjs';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     moduleId: module.id,

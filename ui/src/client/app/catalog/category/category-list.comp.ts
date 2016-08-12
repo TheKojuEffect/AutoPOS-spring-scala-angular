@@ -3,7 +3,6 @@ import {CategoryService} from './category.service';
 import 'rxjs/Rx';
 import {Category} from './category';
 import {Observable} from 'rxjs';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     moduleId: module.id,
